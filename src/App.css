@@ -1,0 +1,43 @@
+/* ========== APP LAYOUT ========== */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--primary-dark);
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  margin-left: 280px;
+  padding: var(--sp-2xl);
+  animation: slideInRight var(--transition-slow);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 1024px) {
+  .app-content {
+    margin-left: 240px;
+    padding: var(--sp-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .app-content {
+    margin-left: 0;
+    padding: var(--sp-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .app-content {
+    padding: var(--sp-md);
+  }
+}
+
+
